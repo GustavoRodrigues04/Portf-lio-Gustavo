@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181a2a 0%, #23243a 100%);
+  color: #e0e7ef;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  max-width: 900px;
+  width: 90%;
+  background: rgba(24, 26, 42, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #00ff8833;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Quadrado {
+  background: rgba(35, 36, 58, 0.97);
+  border-radius: 14px;
+  padding: 36px 28px;
+  box-shadow: 0 2px 12px #00c9ff33;
+  border-left: 3px solid #00ff88;
+  margin-bottom: 24px;
+}
+
+h1, h2, h3 {
+  color: #418d2a;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.1em;
+}
+
+p {
+  color: #e0e7ef;
+  font-size: 1.08em;
+  margin-bottom: 12px;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #00c9ff 0%, #00ff88 100%);
+  color: #181a2a;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px #00c9ff33;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+}
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00ff88 0%, #00c9ff 100%);
+  box-shadow: 0 8px 32px #00ff8833;
+}
+
+.resposta {
+  background: #23243a;
+  border-left: 3px solid #00c9ff;
+  color: #eeeeee;
+  font-size: 1.08em;
+  font-weight: 500;
+  padding: 14px 18px;
+  margin: 14px 0 24px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pergunta {
+  background: #181a2a;
+  color: #00c9ff;
+  font-size: 1.35em;
+  font-weight: 800;
+  padding: 18px 24px;
+  margin: 24px 0 14px 0;
+  border-radius: 10px;
+  border-left: 4px solid #5fe6a2;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #23243a;
+}
+::-webkit-scrollbar-thumb {
+  background: #00c9ff;
+  border-radius: 8px;
+}

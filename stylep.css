@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #181a2a 0%, #23243a 100%);
+    color: #00d4ff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    letter-spacing: 0.03em;
+    font-size: 1.05em;
+    transition: background 0.4s;
+}
+
+#container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 48px 32px;
+    background: rgba(24, 26, 42, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0, 212, 255, 0.08);
+}
+.header {
+    background: rgba(35, 36, 58, 0.98);
+    border-radius: 14px;
+    padding: 36px 28px;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0, 212, 255, 0.07);
+    border-bottom: 2px solid #00d4ff;
+}
+.header h1 {
+    font-size: 2.2em;
+    margin-bottom: 16px;
+    color: #00d4ff;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 16px #00d4ff33;
+}
+.header p {
+    font-size: 1.08em;
+    color: #00ffea;
+    margin-bottom: 4px;
+}
+.Atividade {
+    background: rgba(35, 36, 58, 0.97);
+    border-radius: 14px;
+    padding: 36px 28px;
+    box-shadow: 0 2px 12px rgba(0, 255, 136, 0.07);
+    border-left: 3px solid #00ff88;
+}
+.Atividade h1 {
+    font-size: 1.5em;
+    margin-bottom: 24px;
+    color: #00ff88;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 16px #00ff8833;
+}
+.Atividade ul {
+    list-style: none;
+    padding: 0;
+}
+.Atividade li {
+    margin: 16px 0;
+    padding: 18px 22px;
+    background: rgba(24, 26, 42, 0.93);
+    border-left: 3px solid #00ff88;
+    border-radius: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 8px #00ff8833;
+}
+.Atividade li:hover {
+    background: rgba(0,255,136,0.07);
+    box-shadow: 0 2px 16px #00ff8833;
+}
+.Atividade a {
+    color: #00ffea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.Atividade a:hover {
+    color: #00ff88;
+    text-shadow: 0 2px 12px #00ff8833;
+}
