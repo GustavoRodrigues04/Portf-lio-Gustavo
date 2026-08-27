@@ -212,7 +212,6 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    max-width: 900px;
 }
 
 .skills span {
@@ -220,6 +219,30 @@ h2 {
     border: 1px solid var(--line);
     color: var(--muted);
     font: 0.9rem Arial, sans-serif;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.skill-group {
+    padding: 24px;
+    border: 1px solid var(--line);
+    background: #fbf8f1;
+}
+
+.skill-group:last-child {
+    grid-column: 1 / -1;
+}
+
+.skill-group h3 {
+    margin-bottom: 18px;
+    color: var(--teal);
+    font: 700 0.82rem Arial, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .details-grid {
@@ -373,6 +396,14 @@ h2 {
 
     .award__medal {
         width: 88px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-group:last-child {
+        grid-column: auto;
     }
 
     .details-grid {
