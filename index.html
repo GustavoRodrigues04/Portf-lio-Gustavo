@@ -6,230 +6,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Portfólio de Gustavo Rodrigues Fernandes, estudante de Engenharia de Software e desenvolvedor Full Stack (React, Next.js, Node.js, Prisma).">
+    <meta name="theme-color" content="#0a1024">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Gustavo Rodrigues Fernandes | Desenvolvedor Full Stack</title>
 </head>
 
 <body>
-    <main class="portfolio">
-        <header class="hero" id="inicio">
-            <div class="hero__content">
-                <p class="eyebrow">Portfólio profissional</p>
-                <h1>Gustavo Rodrigues Fernandes</h1>
-                <p class="hero__role">Desenvolvedor Full Stack · Estudante de Engenharia de Software · Em busca de
-                    estágio</p>
-                <div class="hero__actions">
-                    <a class="button button--primary" href="mailto:gustavo0904fe@hotmail.com">Entrar em contato</a>
-                    <a class="button button--secondary" href="#projetos">Ver projetos</a>
-                    <a class="button button--secondary" href="https://github.com/GustavoRodrigues04" target="_blank"
-                        rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <img class="hero__photo" src="./img/WhatsApp Image 2026-02-24 at 09.55.27 (1).jpeg"
-                alt="Foto de Gustavo Rodrigues Fernandes">
-        </header>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-        <nav class="navigation" aria-label="Navegação principal">
-            <a href="#objetivo">Objetivo</a>
+    <nav class="nav" aria-label="Navegação principal">
+        <a class="nav__brand" href="#inicio">GRF<span class="lamp lamp--cyan" aria-hidden="true"></span></a>
+        <div class="nav__links">
             <a href="#projetos">Projetos</a>
             <a href="#experiencia">Experiência</a>
-            <a href="#reconhecimentos">Reconhecimentos</a>
+            <a href="#reconhecimentos">Prêmios</a>
             <a href="#conhecimentos">Conhecimentos</a>
             <a href="#formacao">Formação</a>
             <a href="#contato">Contato</a>
-        </nav>
+        </div>
+    </nav>
 
+    <header class="hero" id="inicio">
+        <div class="hero__floor" aria-hidden="true"></div>
+        <canvas class="hero__scene" id="gears" aria-hidden="true"></canvas>
+
+        <div class="hero__content">
+            <div class="hero__id">
+                <img class="hero__photo" src="./img/WhatsApp Image 2026-02-24 at 09.55.27 (1).jpeg"
+                    alt="Foto de Gustavo Rodrigues Fernandes">
+                <p class="status"><span class="lamp lamp--amber" aria-hidden="true"></span>Disponível para estágio</p>
+            </div>
+            <h1>Gustavo<br>Rodrigues<br>Fernandes</h1>
+            <p class="hero__role">Desenvolvedor Full Stack e estudante de Engenharia de Software. Comecei programando
+                CLPs em competições de mecatrônica; hoje coloco sistemas web completos em produção.</p>
+            <div class="hero__actions">
+                <a class="button button--primary" href="#projetos">Ver projetos</a>
+                <a class="button button--ghost" href="mailto:gustavo0904fe@hotmail.com">Entrar em contato</a>
+                <a class="button button--ghost" href="https://github.com/GustavoRodrigues04" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo">
         <section class="section section--objective" id="objetivo">
-            <p class="section__label">01 / Direção profissional</p>
-            <h2>Objetivo</h2>
-            <p class="objective">Busco uma vaga de estágio em Desenvolvimento Full Stack. Já coloquei em produção, sozinho, um
-                sistema completo — site, painel de gestão e API — para uma empresa real, cuidando de tudo: arquitetura,
-                banco de dados, segurança, LGPD e deploy. Quero aplicar essa experiência prática, junto com a
-                formação em Engenharia de Software e a base técnica em automação industrial, para construir soluções
+            <h2 class="sr-only">Objetivo</h2>
+            <p class="objective">Busco uma vaga de estágio em Desenvolvimento Full Stack. Já coloquei em produção,
+                sozinho, um sistema completo — site, painel de gestão e API — para uma empresa real, cuidando de tudo:
+                arquitetura, banco de dados, segurança, LGPD e deploy. Quero aplicar essa experiência prática, junto com
+                a formação em Engenharia de Software e a base técnica em automação industrial, para construir soluções
                 eficientes e continuar evoluindo no Front-end e no Back-end.</p>
         </section>
 
         <section class="section" id="projetos">
-            <p class="section__label">02 / O que eu construí</p>
             <h2>Projetos</h2>
+
+            <article class="case panel">
+                <header class="case__header">
+                    <p class="status"><span class="lamp lamp--green" aria-hidden="true"></span>Em produção</p>
+                    <h3>Contromega</h3>
+                    <p class="case__subtitle">Site, painel e API para uma empresa de portas de enrolar</p>
+                </header>
+                <p class="case__lead">Do pedido de orçamento no site até a entrega do serviço: um sistema completo,
+                    feito do zero e sozinho, para uma empresa que atende lojas, shoppings e comércios desde 2012. A
+                    empresa saiu de planilhas para um sistema no ar, usado pela equipe no escritório e pelos técnicos
+                    na rua.</p>
+
+                <dl class="case__stats">
+                    <div><dt>3</dt><dd>apps em produção: site, painel e API</dd></div>
+                    <div><dt>~2</dt><dd>meses do primeiro commit ao ar</dd></div>
+                    <div><dt>20</dt><dd>pull requests mesclados</dd></div>
+                    <div><dt>100</dt><dd>no Lighthouse em acessibilidade, boas práticas e SEO</dd></div>
+                </dl>
+
+                <div class="case__arch">
+                    <div class="module" data-tilt>
+                        <h4>Site público</h4>
+                        <p>Para o cliente. Apresenta os serviços e recebe pedidos de orçamento com fotos. Ilustrações
+                            em SVG feitas no código e animação só com CSS. Performance de 92–96 no celular.</p>
+                        <div class="tags"><span>Next.js 16</span><span>Tailwind 4</span><span>Vercel</span></div>
+                    </div>
+                    <div class="module" data-tilt>
+                        <h4>Painel de gestão</h4>
+                        <p>Para a equipe. Orçamentos, serviços, fotos, clientes e financeiro, com login por perfil.
+                            Atualiza sozinho e funciona no celular do técnico.</p>
+                        <div class="tags"><span>React 19</span><span>Vite</span><span>TanStack Query</span></div>
+                    </div>
+                    <div class="module module--core" data-tilt>
+                        <h4>API REST</h4>
+                        <p>O que conecta tudo. Autenticação JWT, orçamentos, serviços e etapas, fotos, clientes,
+                            financeiro e e-mails. Monorepo com schemas Zod compartilhados entre os três apps.</p>
+                        <div class="tags"><span>Express 5</span><span>Prisma 7</span><span>PostgreSQL</span><span>Railway</span></div>
+                    </div>
+                </div>
+
+                <div class="case__columns">
+                    <div>
+                        <h4 class="case__kicker">Funcionalidades</h4>
+                        <ul class="list">
+                            <li><strong>Formulário à prova de spam e de LGPD:</strong> validação Zod no navegador e na
+                                API, Cloudflare Turnstile, limite por IP, até 5 fotos reduzidas no navegador (de 4–12 MB
+                                para centenas de KB, sem GPS) e aceite da política gravado com data e versão.</li>
+                            <li><strong>Do pedido à entrega:</strong> Recebido, Em análise, Aprovado, Em andamento,
+                                Concluído. Aprovar cria o serviço e envia e-mail ao cliente (Resend); cada etapa fica no
+                                histórico com autor e hora.</li>
+                            <li><strong>Financeiro e perfis:</strong> admin e gerente veem custos, recebido, a receber e
+                                notas fiscais; para o técnico, a API nem envia os valores.</li>
+                            <li><strong>Feito para a rua:</strong> o técnico atualiza o serviço e anexa fotos de antes e
+                                depois direto da câmera do celular.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="case__kicker">Bastidores</h4>
+                        <ul class="list">
+                            <li><strong>Sessão segura:</strong> token de 15 min + refresh de 7 dias rotativo; token
+                                reutilizado é tratado como vazado e derruba a sessão.</li>
+                            <li><strong>Senhas com Argon2id</strong> e Web Locks para várias abas renovarem o token sem
+                                conflito.</li>
+                            <li><strong>Backup diário:</strong> GitHub Actions faz pg_dump do PostgreSQL e guarda no
+                                Cloudflare R2.</li>
+                            <li><strong>Monitoramento com Sentry</strong> sem IP, cookies ou corpo das requisições
+                                (LGPD).</li>
+                            <li><strong>SEO local:</strong> Schema.org LocalBusiness, sitemap automático e imagem de
+                                compartilhamento por página.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case__gallery-wrap">
+                    <h4 class="case__kicker">Telas do projeto <span>deslize para ver mais</span></h4>
+                    <div class="case__gallery" tabindex="0" aria-label="Galeria de telas do projeto Contromega">
+                        <a href="./img/contromega/slide-01.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-01.jpg" alt="Visão geral: site público e painel no celular"></a>
+                        <a href="./img/contromega/slide-02.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-02.jpg" alt="Arquitetura: três apps em um monorepo"></a>
+                        <a href="./img/contromega/slide-03.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-03.jpg" alt="Site público e notas do Lighthouse"></a>
+                        <a href="./img/contromega/slide-05.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-05.jpg" alt="Formulário de pedido de orçamento"></a>
+                        <a href="./img/contromega/slide-06.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-06.jpg" alt="Painel da equipe: visão geral"></a>
+                        <a href="./img/contromega/slide-07.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-07.jpg" alt="Fluxo do pedido até a entrega do serviço"></a>
+                        <a href="./img/contromega/slide-08.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-08.jpg" alt="Tela de financeiro e perfis de acesso"></a>
+                        <a href="./img/contromega/slide-09.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-09.jpg" alt="Site e painel no celular"></a>
+                        <a href="./img/contromega/slide-10.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-10.jpg" alt="Bastidores: segurança, backup e SEO"></a>
+                        <a href="./img/contromega/slide-11.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-11.jpg" alt="Resultado e aprendizados"></a>
+                    </div>
+                    <p class="case__note">As telas do painel usam dados fictícios, num ambiente de demonstração.</p>
+                </div>
+
+                <a class="button button--primary" href="https://contromega.com.br" target="_blank"
+                    rel="noopener noreferrer">Ver o site no ar</a>
+            </article>
+
             <div class="projects">
-                <article class="project project--featured case">
-                    <div class="project__header">
-                        <span class="project__status">Projeto real · Em produção</span>
-                        <h3>Contromega — Site, painel e API para uma empresa de portas de enrolar</h3>
-                    </div>
-                    <p class="case__lead">Do pedido de orçamento no site até a entrega do serviço: um sistema completo,
-                        feito do zero e sozinho, para uma empresa que atende lojas, shoppings e comércios desde 2012. A
-                        empresa saiu de planilhas para um sistema no ar, usado pela equipe no escritório e pelos
-                        técnicos na rua.</p>
-
-                    <div class="case__stats">
-                        <div><strong>3</strong><span>apps em produção: site, painel e API</span></div>
-                        <div><strong>~2</strong><span>meses do primeiro commit ao ar</span></div>
-                        <div><strong>20</strong><span>pull requests mesclados</span></div>
-                        <div><strong>100</strong><span>no Lighthouse em acessibilidade, boas práticas e SEO</span></div>
-                    </div>
-
-                    <div class="case__arch">
-                        <div>
-                            <p class="case__kicker">Para o cliente</p>
-                            <h4>Site público</h4>
-                            <p>Apresenta os serviços e recebe pedidos de orçamento com fotos. Ilustrações em SVG feitas
-                                no código e animação só com CSS. Performance de 92–96 no celular.</p>
-                            <div class="skills"><span>Next.js 16</span><span>Tailwind 4</span><span>Vercel</span></div>
-                        </div>
-                        <div>
-                            <p class="case__kicker">Para a equipe</p>
-                            <h4>Painel de gestão</h4>
-                            <p>Orçamentos, serviços, fotos, clientes e financeiro, com login por perfil. Atualiza
-                                sozinho e funciona no celular do técnico.</p>
-                            <div class="skills"><span>React 19</span><span>Vite</span><span>TanStack Query</span></div>
-                        </div>
-                        <div>
-                            <p class="case__kicker">O que conecta tudo</p>
-                            <h4>API REST</h4>
-                            <p>Autenticação JWT, orçamentos, serviços e etapas, fotos, clientes, financeiro e e-mails.
-                                Monorepo com schemas Zod compartilhados entre os três apps.</p>
-                            <div class="skills"><span>Express 5</span><span>Prisma 7</span><span>PostgreSQL</span><span>Railway</span></div>
-                        </div>
-                    </div>
-
-                    <div class="case__columns">
-                        <div>
-                            <p class="case__kicker">Funcionalidades</p>
-                            <ul class="project__highlights">
-                                <li><strong>Formulário à prova de spam e de LGPD:</strong> validação Zod no navegador e
-                                    na API, Cloudflare Turnstile, limite por IP, até 5 fotos reduzidas no navegador (de
-                                    4–12 MB para centenas de KB, sem GPS) e aceite da política gravado com data e
-                                    versão.</li>
-                                <li><strong>Do pedido à entrega:</strong> Recebido → Em análise → Aprovado → Em
-                                    andamento → Concluído. Aprovar cria o serviço e envia e-mail ao cliente (Resend);
-                                    cada etapa fica no histórico com autor e hora.</li>
-                                <li><strong>Financeiro e perfis:</strong> admin e gerente veem custos, recebido, a
-                                    receber e notas fiscais; para o técnico, a API nem envia os valores.</li>
-                                <li><strong>Feito para a rua:</strong> o técnico atualiza o serviço e anexa fotos de
-                                    antes e depois direto da câmera do celular.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="case__kicker">Bastidores</p>
-                            <ul class="project__highlights">
-                                <li><strong>Sessão segura:</strong> token de 15 min + refresh de 7 dias rotativo; token
-                                    reutilizado é tratado como vazado e derruba a sessão.</li>
-                                <li><strong>Senhas com Argon2id</strong> e Web Locks para várias abas renovarem o
-                                    token sem conflito.</li>
-                                <li><strong>Backup diário:</strong> GitHub Actions faz pg_dump do PostgreSQL e guarda
-                                    no Cloudflare R2.</li>
-                                <li><strong>Monitoramento com Sentry</strong> sem IP, cookies ou corpo das requisições
-                                    (LGPD).</li>
-                                <li><strong>SEO local:</strong> Schema.org LocalBusiness, sitemap automático e imagem de
-                                    compartilhamento por página.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="case__gallery-wrap">
-                        <p class="case__kicker">Telas do projeto <span>· deslize para ver mais</span></p>
-                        <div class="case__gallery" tabindex="0" aria-label="Galeria de telas do projeto Contromega">
-                            <a href="./img/contromega/slide-01.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-01.jpg" alt="Visão geral: site público e painel no celular"></a>
-                            <a href="./img/contromega/slide-02.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-02.jpg" alt="Arquitetura: três apps em um monorepo"></a>
-                            <a href="./img/contromega/slide-03.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-03.jpg" alt="Site público e notas do Lighthouse"></a>
-                            <a href="./img/contromega/slide-05.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-05.jpg" alt="Formulário de pedido de orçamento"></a>
-                            <a href="./img/contromega/slide-06.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-06.jpg" alt="Painel da equipe: visão geral"></a>
-                            <a href="./img/contromega/slide-07.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-07.jpg" alt="Fluxo do pedido até a entrega do serviço"></a>
-                            <a href="./img/contromega/slide-08.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-08.jpg" alt="Tela de financeiro e perfis de acesso"></a>
-                            <a href="./img/contromega/slide-09.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-09.jpg" alt="Site e painel no celular"></a>
-                            <a href="./img/contromega/slide-10.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-10.jpg" alt="Bastidores: segurança, backup e SEO"></a>
-                            <a href="./img/contromega/slide-11.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-11.jpg" alt="Resultado e aprendizados"></a>
-                        </div>
-                        <p class="case__note">As telas do painel usam dados fictícios, num ambiente de demonstração.</p>
-                    </div>
-
-                    <div class="project__links">
-                        <a class="button button--primary" href="https://contromega.com.br" target="_blank" rel="noopener noreferrer">Ver site no ar ↗</a>
-                    </div>
+                <article class="project panel" data-tilt>
+                    <p class="status"><span class="lamp lamp--green" aria-hidden="true"></span>Hospedado em VPS</p>
+                    <h3>Dashboard de Conciliação Financeira</h3>
+                    <p>Dashboard web para conciliação de dados financeiros, publicada e mantida por mim em uma VPS da
+                        Hostinger, com a configuração do servidor e do deploy feita por conta própria.</p>
+                    <div class="tags"><span>Dashboard</span><span>VPS (Hostinger)</span><span>Deploy</span></div>
                 </article>
 
-                <article class="project">
-                    <div class="project__header">
-                        <span class="project__status">Hospedado em VPS</span>
-                        <h3>Dashboard de Conciliação Financeira</h3>
-                    </div>
-                    <p>Dashboard web para conciliação de dados financeiros, publicada e mantida por mim em uma VPS
-                        da Hostinger, com a configuração do servidor e do deploy feita por conta própria.</p>
-                    <div class="skills"><span>Dashboard</span><span>VPS (Hostinger)</span><span>Deploy</span></div>
+                <article class="project panel" data-tilt>
+                    <p class="status"><span class="lamp lamp--cyan" aria-hidden="true"></span>Ferramenta</p>
+                    <h3>Organizador de Provas de Mecatrônica</h3>
+                    <p>Ferramenta interativa em HTML/JavaScript para organizar a documentação das tarefas da competição
+                        de Mecatrônica (sistemas Festo/MPS) e exportá-la como um PDF formatado. Usada na preparação para
+                        a SP Skills.</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Geração de PDF</span></div>
                 </article>
 
-                <article class="project">
-                    <div class="project__header">
-                        <span class="project__status">Ferramenta</span>
-                        <h3>Organizador de Provas — Mecatrônica</h3>
-                    </div>
-                    <p>Ferramenta interativa em HTML/JavaScript para organizar a documentação das tarefas da
-                        competição de Mecatrônica (sistemas Festo/MPS) e exportá-la como um PDF formatado. Usada na
-                        preparação para a SP Skills.</p>
-                    <div class="skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Geração de PDF</span></div>
-                </article>
-
-                <article class="project">
-                    <div class="project__header">
-                        <span class="project__status">Acadêmico</span>
-                        <h3>Atividades de Engenharia de Software</h3>
-                    </div>
+                <article class="project panel" data-tilt>
+                    <p class="status"><span class="lamp lamp--cyan" aria-hidden="true"></span>Acadêmico</p>
+                    <h3>Atividades de Engenharia de Software</h3>
                     <p>Exercícios da faculdade com manipulação de arrays e objetos em JavaScript, além de projetos de
-                        Programação Orientada a Objetos em Java (herança e polimorfismo modelados a partir de
-                        diagramas UML).</p>
-                    <div class="skills"><span>JavaScript</span><span>Java</span><span>POO</span><span>UML</span></div>
-                    <div class="project__links">
-                        <a href="./aula2_20022026/index.html">Ver atividade de arrays e objetos →</a>
-                    </div>
+                        Programação Orientada a Objetos em Java (herança e polimorfismo modelados a partir de diagramas
+                        UML).</p>
+                    <div class="tags"><span>JavaScript</span><span>Java</span><span>POO</span><span>UML</span></div>
+                    <a class="link" href="./aula2_20022026/index.html">Ver a atividade de arrays e objetos</a>
                 </article>
             </div>
         </section>
 
         <section class="section" id="experiencia">
-            <p class="section__label">03 / Trajetória profissional</p>
             <h2>Experiência</h2>
-            <div class="timeline">
-                <article class="timeline__item"><span>Dez/2025 – Out/2026</span>
+            <ol class="timeline">
+                <li>
+                    <time>Dez/2025 – Out/2026</time>
                     <h3>Contromega</h3>
-                    <p class="timeline__role">Técnico de manutenção · Desenvolvedor do sistema web</p>
+                    <p class="timeline__role">Técnico de manutenção e desenvolvedor do sistema web</p>
                     <p>Manutenção de portas de enrolar de aço automáticas. Paralelamente, desenvolvi e coloquei em
-                        produção o site, o painel CRM e a API da empresa, além de gerenciar a conta de Google Ads.</p>
-                </article>
-                <article class="timeline__item"><span>Ago/2024 – Nov/2025</span>
+                        produção o site, o painel de gestão e a API da empresa, além de gerenciar a conta de Google
+                        Ads.</p>
+                </li>
+                <li>
+                    <time>Ago/2024 – Nov/2025</time>
                     <h3>SENAI-SP</h3>
                     <p class="timeline__role">Competidor de Mecatrônica</p>
-                    <p>Responsável pela programação e estruturação do projeto da equipe: programação de CLPs
-                        (SCL, Ladder, GraphSet), integração de dispositivos, IHM/supervisório e diagnóstico de falhas
-                        sob pressão de tempo.</p>
-                </article>
-                <article class="timeline__item"><span>Dez/2023 – Jan/2024</span>
+                    <p>Responsável pela programação e estruturação do projeto da equipe: programação de CLPs (SCL,
+                        Ladder, GraphSet), integração de dispositivos, IHM/supervisório e diagnóstico de falhas sob
+                        pressão de tempo.</p>
+                </li>
+                <li>
+                    <time>Dez/2023 – Jan/2024</time>
                     <h3>Autônomo</h3>
                     <p class="timeline__role">Eletricista instalador</p>
                     <p>Instalações e manutenções elétricas residenciais.</p>
-                </article>
-            </div>
+                </li>
+            </ol>
         </section>
 
         <section class="section" id="reconhecimentos">
-            <p class="section__label">04 / Conquistas em destaque</p>
-            <h2>Prêmios e Reconhecimentos</h2>
+            <h2>Prêmios</h2>
             <div class="awards">
-                <article class="award">
-                    <div class="award__medal">Ouro<br><span>2024</span></div>
+                <article class="award award--gold panel" data-tilt>
+                    <div class="medal-wrap" aria-hidden="true"><div class="medal"><span>1º</span></div></div>
                     <div>
-                        <h3>Medalha de Ouro — São Paulo Skills 2024</h3>
-                        <p class="award__category">Modalidade "Mecatrônica"</p>
+                        <h3>Medalha de Ouro</h3>
+                        <p class="award__event">São Paulo Skills 2024, Mecatrônica</p>
                         <p>Primeiro lugar na competição estadual, disputando contra equipes de todo o estado de São
                             Paulo.</p>
                     </div>
                 </article>
-                <article class="award award--silver">
-                    <div class="award__medal">Prata<br><span>2025</span></div>
+                <article class="award award--silver panel" data-tilt>
+                    <div class="medal-wrap" aria-hidden="true"><div class="medal"><span>2º</span></div></div>
                     <div>
-                        <h3>Medalha de Prata — WorldSkills Brasil 2025</h3>
-                        <p class="award__category">Modalidade "Mecatrônica"</p>
+                        <h3>Medalha de Prata</h3>
+                        <p class="award__event">WorldSkills Brasil 2025, Mecatrônica</p>
                         <p>Segundo lugar na etapa nacional, competindo contra as melhores equipes do país.</p>
                     </div>
                 </article>
@@ -241,81 +245,83 @@
         </section>
 
         <section class="section" id="conhecimentos">
-            <p class="section__label">05 / Ferramentas e tecnologias</p>
             <h2>Conhecimentos</h2>
             <div class="skills-grid">
                 <article class="skill-group">
-                    <h3>Linguagens de programação</h3>
-                    <div class="skills"><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span></div>
+                    <h3>Linguagens</h3>
+                    <div class="tags"><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Front-end</h3>
-                    <div class="skills"><span>React</span><span>Next.js</span><span>Vite</span><span>Tailwind CSS</span><span>TanStack Query</span><span>HTML/CSS</span><span>SVG</span></div>
+                    <div class="tags"><span>React</span><span>Next.js</span><span>Vite</span><span>Tailwind CSS</span><span>TanStack Query</span><span>HTML/CSS</span><span>SVG</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Back-end e bancos de dados</h3>
-                    <div class="skills"><span>Node.js</span><span>Express</span><span>Nest.js</span><span>Prisma ORM</span><span>PostgreSQL</span><span>MongoDB</span><span>Zod</span><span>JWT</span></div>
+                    <div class="tags"><span>Node.js</span><span>Express</span><span>Nest.js</span><span>Prisma ORM</span><span>PostgreSQL</span><span>MongoDB</span><span>Zod</span><span>JWT</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Deploy e infraestrutura</h3>
-                    <div class="skills"><span>Vercel</span><span>Railway</span><span>Cloudflare (DNS, R2, Turnstile)</span><span>GitHub Actions</span><span>Sentry</span><span>Resend</span><span>VPS (Hostinger)</span><span>Git/GitHub</span></div>
+                    <div class="tags"><span>Vercel</span><span>Railway</span><span>Cloudflare (DNS, R2, Turnstile)</span><span>GitHub Actions</span><span>Sentry</span><span>Resend</span><span>VPS (Hostinger)</span><span>Git/GitHub</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>IA e automação de tarefas</h3>
-                    <div class="skills"><span>Claude</span><span>ChatGPT</span><span>Machine Learning</span><span>Python (openpyxl)</span></div>
+                    <div class="tags"><span>Claude</span><span>ChatGPT</span><span>Machine Learning</span><span>Python (openpyxl)</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Automação industrial</h3>
-                    <div class="skills"><span>CLP</span><span>SCL</span><span>Ladder</span><span>GraphSet</span><span>IHM/Supervisório</span><span>Festo MPS</span></div>
+                    <div class="tags"><span>CLP</span><span>SCL</span><span>Ladder</span><span>GraphSet</span><span>IHM/Supervisório</span><span>Festo MPS</span></div>
                 </article>
             </div>
         </section>
 
         <div class="details-grid">
             <section class="section" id="formacao">
-                <p class="section__label">06 / Estudos</p>
-                <h2>Formação Acadêmica</h2>
-                <div class="timeline">
-                    <article class="timeline__item"><span>Em andamento · Conclusão 07/2028</span>
+                <h2>Formação</h2>
+                <ol class="timeline">
+                    <li>
+                        <time>Em andamento, conclusão em 07/2028</time>
                         <h3>Engenharia de Software</h3>
-                        <p>Universidade São Judas — Mooca</p>
-                    </article>
-                    <article class="timeline__item"><span>Concluído em 2024</span>
+                        <p>Universidade São Judas, Mooca</p>
+                    </li>
+                    <li>
+                        <time>Concluído em 2024</time>
                         <h3>Técnico em Eletroeletrônica</h3>
                         <p>Escola SENAI "Roberto Simonsen"</p>
-                    </article>
-                    <article class="timeline__item"><span>Concluído · 1.600 h</span>
+                    </li>
+                    <li>
+                        <time>Concluído, 1.600 h</time>
                         <h3>Eletricista de Manutenção Eletroeletrônica</h3>
                         <p>SENAI-SP</p>
-                    </article>
-                </div>
+                    </li>
+                </ol>
             </section>
 
             <section class="section" id="idiomas">
-                <p class="section__label">07 / Comunicação</p>
                 <h2>Idiomas</h2>
-                <ul class="language-list">
-                    <li><strong>Inglês</strong><span>Intermediário - Cursando</span></li>
-                    <li><strong>Espanhol</strong><span>Básico</span></li>
+                <ul class="languages">
+                    <li><strong>Inglês</strong><span>Intermediário, cursando</span>
+                        <meter min="0" max="3" value="2" aria-label="Nível intermediário"></meter></li>
+                    <li><strong>Espanhol</strong><span>Básico</span>
+                        <meter min="0" max="3" value="1" aria-label="Nível básico"></meter></li>
                 </ul>
             </section>
         </div>
-
-        <footer class="footer" id="contato">
-            <div>
-                <p class="section__label">Vamos conversar</p>
-                <h2>Contato</h2>
-            </div>
-            <div class="contact-list">
-                <p>Jardim Aricanduva - São Paulo - SP · CNH A/B</p><a
-                    href="mailto:gustavo0904fe@hotmail.com">gustavo0904fe@hotmail.com</a><a
-                    href="tel:+5511940820476">+55 (11) 94082-0476</a><a
-                    href="https://www.linkedin.com/in/gustavo-rodrigues-b5a732303" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/GustavoRodrigues04"
-                    target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
-        </footer>
     </main>
+
+    <footer class="footer" id="contato">
+        <h2>Vamos conversar</h2>
+        <div class="contact">
+            <a href="mailto:gustavo0904fe@hotmail.com">gustavo0904fe@hotmail.com</a>
+            <a href="tel:+5511940820476">+55 (11) 94082-0476</a>
+            <a href="https://www.linkedin.com/in/gustavo-rodrigues-b5a732303" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/GustavoRodrigues04" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <p class="footer__meta">Jardim Aricanduva, São Paulo – SP. CNH A/B.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
