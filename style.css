@@ -339,6 +339,7 @@ h2 {
 }
 
 .project {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -441,6 +442,162 @@ h2 {
     line-height: 1.65;
 }
 
+/* Estudo de caso — Contromega */
+.case {
+    gap: 28px;
+}
+
+.case:hover {
+    transform: none;
+}
+
+.case__lead {
+    max-width: 860px;
+    font-size: 1.05rem !important;
+}
+
+.case__kicker {
+    margin: 0 0 12px;
+    color: var(--coral);
+    font: 700 0.72rem Arial, sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.case__kicker span {
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: none;
+}
+
+.case__stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.case__stats div {
+    padding: 18px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+}
+
+.case__stats strong {
+    display: block;
+    color: var(--teal);
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.case__stats span {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font: 0.82rem/1.4 Arial, sans-serif;
+}
+
+.case__arch {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.case__arch > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+}
+
+.case__arch .case__kicker {
+    margin: 0;
+}
+
+.case__arch h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.case__arch p:not(.case__kicker) {
+    margin: 0;
+    color: var(--muted);
+    font: 0.9rem/1.55 Arial, sans-serif;
+}
+
+.case__arch .skills {
+    margin-top: auto;
+}
+
+.case__columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.case__columns .project__highlights {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.case__columns .project__highlights li {
+    margin-bottom: 10px;
+}
+
+.case__columns strong {
+    color: var(--ink);
+}
+
+.case__gallery {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: var(--teal) transparent;
+}
+
+.case__gallery a {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.case__gallery img {
+    display: block;
+    width: 260px;
+    height: auto;
+    aspect-ratio: 900 / 1126;
+    border: 1px solid #00000020;
+    transition: transform 180ms ease;
+}
+
+.case__gallery a:hover img {
+    transform: translateY(-4px);
+}
+
+.case__note {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font: italic 0.8rem Arial, sans-serif;
+}
+
+.case .project__links .button {
+    font-size: 0.78rem;
+}
+
+.case .project__links a.button--primary {
+    color: var(--cream);
+}
+
+.case .project__links a.button--primary:hover {
+    color: var(--cream);
+}
+
 @keyframes rise {
     from {
         opacity: 0;
@@ -513,6 +670,19 @@ h2 {
         padding: 22px;
     }
 
+    .case__stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .case__arch,
+    .case__columns {
+        grid-template-columns: 1fr;
+    }
+
+    .case__gallery img {
+        width: 220px;
+    }
+
     .details-grid {
         display: block;
     }
@@ -533,4 +703,8 @@ h2 {
 }
 .project:last-child:nth-child(even) {
     grid-column: 1 / -1;
+}
+
+.case__gallery-wrap {
+    min-width: 0;
 }

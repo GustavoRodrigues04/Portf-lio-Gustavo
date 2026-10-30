@@ -42,9 +42,9 @@
         <section class="section section--objective" id="objetivo">
             <p class="section__label">01 / Direção profissional</p>
             <h2>Objetivo</h2>
-            <p class="objective">Busco uma vaga de estágio em Desenvolvimento Full Stack. Já coloquei em produção um
-                sistema completo — site institucional, painel administrativo/CRM e API — para uma empresa real,
-                cuidando de tudo, do banco de dados ao deploy. Quero aplicar essa experiência prática, junto com a
+            <p class="objective">Busco uma vaga de estágio em Desenvolvimento Full Stack. Já coloquei em produção, sozinho, um
+                sistema completo — site, painel de gestão e API — para uma empresa real, cuidando de tudo: arquitetura,
+                banco de dados, segurança, LGPD e deploy. Quero aplicar essa experiência prática, junto com a
                 formação em Engenharia de Software e a base técnica em automação industrial, para construir soluções
                 eficientes e continuar evoluindo no Front-end e no Back-end.</p>
         </section>
@@ -53,24 +53,100 @@
             <p class="section__label">02 / O que eu construí</p>
             <h2>Projetos</h2>
             <div class="projects">
-                <article class="project project--featured">
+                <article class="project project--featured case">
                     <div class="project__header">
-                        <span class="project__status">Em produção</span>
-                        <h3>Contromega — Site institucional + Painel CRM</h3>
+                        <span class="project__status">Projeto real · Em produção</span>
+                        <h3>Contromega — Site, painel e API para uma empresa de portas de enrolar</h3>
                     </div>
-                    <p>Sistema completo para uma empresa de manutenção de portas de aço automáticas que atende São
-                        Paulo e todo o Brasil. Desenvolvi sozinho o site público, um painel administrativo com CRM para
-                        gestão de clientes e serviços, e a API que conecta tudo. Planejei o projeto em um roadmap de 8
-                        sprints e cuidei da infraestrutura, dos domínios e da segurança das variáveis de ambiente.</p>
-                    <ul class="project__highlights">
-                        <li>Site público em Next.js e painel administrativo em React + Vite</li>
-                        <li>API REST em Node.js/Express com Prisma ORM</li>
-                        <li>Deploy na Vercel (front-ends) e Railway (API), DNS na Cloudflare</li>
-                        <li>Relatórios de serviços em Excel gerados com Python (openpyxl)</li>
-                    </ul>
-                    <div class="skills"><span>Next.js</span><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>Vercel</span><span>Railway</span><span>Cloudflare</span></div>
+                    <p class="case__lead">Do pedido de orçamento no site até a entrega do serviço: um sistema completo,
+                        feito do zero e sozinho, para uma empresa que atende lojas, shoppings e comércios desde 2012. A
+                        empresa saiu de planilhas para um sistema no ar, usado pela equipe no escritório e pelos
+                        técnicos na rua.</p>
+
+                    <div class="case__stats">
+                        <div><strong>3</strong><span>apps em produção: site, painel e API</span></div>
+                        <div><strong>~2</strong><span>meses do primeiro commit ao ar</span></div>
+                        <div><strong>20</strong><span>pull requests mesclados</span></div>
+                        <div><strong>100</strong><span>no Lighthouse em acessibilidade, boas práticas e SEO</span></div>
+                    </div>
+
+                    <div class="case__arch">
+                        <div>
+                            <p class="case__kicker">Para o cliente</p>
+                            <h4>Site público</h4>
+                            <p>Apresenta os serviços e recebe pedidos de orçamento com fotos. Ilustrações em SVG feitas
+                                no código e animação só com CSS. Performance de 92–96 no celular.</p>
+                            <div class="skills"><span>Next.js 16</span><span>Tailwind 4</span><span>Vercel</span></div>
+                        </div>
+                        <div>
+                            <p class="case__kicker">Para a equipe</p>
+                            <h4>Painel de gestão</h4>
+                            <p>Orçamentos, serviços, fotos, clientes e financeiro, com login por perfil. Atualiza
+                                sozinho e funciona no celular do técnico.</p>
+                            <div class="skills"><span>React 19</span><span>Vite</span><span>TanStack Query</span></div>
+                        </div>
+                        <div>
+                            <p class="case__kicker">O que conecta tudo</p>
+                            <h4>API REST</h4>
+                            <p>Autenticação JWT, orçamentos, serviços e etapas, fotos, clientes, financeiro e e-mails.
+                                Monorepo com schemas Zod compartilhados entre os três apps.</p>
+                            <div class="skills"><span>Express 5</span><span>Prisma 7</span><span>PostgreSQL</span><span>Railway</span></div>
+                        </div>
+                    </div>
+
+                    <div class="case__columns">
+                        <div>
+                            <p class="case__kicker">Funcionalidades</p>
+                            <ul class="project__highlights">
+                                <li><strong>Formulário à prova de spam e de LGPD:</strong> validação Zod no navegador e
+                                    na API, Cloudflare Turnstile, limite por IP, até 5 fotos reduzidas no navegador (de
+                                    4–12 MB para centenas de KB, sem GPS) e aceite da política gravado com data e
+                                    versão.</li>
+                                <li><strong>Do pedido à entrega:</strong> Recebido → Em análise → Aprovado → Em
+                                    andamento → Concluído. Aprovar cria o serviço e envia e-mail ao cliente (Resend);
+                                    cada etapa fica no histórico com autor e hora.</li>
+                                <li><strong>Financeiro e perfis:</strong> admin e gerente veem custos, recebido, a
+                                    receber e notas fiscais; para o técnico, a API nem envia os valores.</li>
+                                <li><strong>Feito para a rua:</strong> o técnico atualiza o serviço e anexa fotos de
+                                    antes e depois direto da câmera do celular.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="case__kicker">Bastidores</p>
+                            <ul class="project__highlights">
+                                <li><strong>Sessão segura:</strong> token de 15 min + refresh de 7 dias rotativo; token
+                                    reutilizado é tratado como vazado e derruba a sessão.</li>
+                                <li><strong>Senhas com Argon2id</strong> e Web Locks para várias abas renovarem o
+                                    token sem conflito.</li>
+                                <li><strong>Backup diário:</strong> GitHub Actions faz pg_dump do PostgreSQL e guarda
+                                    no Cloudflare R2.</li>
+                                <li><strong>Monitoramento com Sentry</strong> sem IP, cookies ou corpo das requisições
+                                    (LGPD).</li>
+                                <li><strong>SEO local:</strong> Schema.org LocalBusiness, sitemap automático e imagem de
+                                    compartilhamento por página.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case__gallery-wrap">
+                        <p class="case__kicker">Telas do projeto <span>· deslize para ver mais</span></p>
+                        <div class="case__gallery" tabindex="0" aria-label="Galeria de telas do projeto Contromega">
+                            <a href="./img/contromega/slide-01.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-01.jpg" alt="Visão geral: site público e painel no celular"></a>
+                            <a href="./img/contromega/slide-02.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-02.jpg" alt="Arquitetura: três apps em um monorepo"></a>
+                            <a href="./img/contromega/slide-03.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-03.jpg" alt="Site público e notas do Lighthouse"></a>
+                            <a href="./img/contromega/slide-05.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-05.jpg" alt="Formulário de pedido de orçamento"></a>
+                            <a href="./img/contromega/slide-06.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-06.jpg" alt="Painel da equipe: visão geral"></a>
+                            <a href="./img/contromega/slide-07.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-07.jpg" alt="Fluxo do pedido até a entrega do serviço"></a>
+                            <a href="./img/contromega/slide-08.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-08.jpg" alt="Tela de financeiro e perfis de acesso"></a>
+                            <a href="./img/contromega/slide-09.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-09.jpg" alt="Site e painel no celular"></a>
+                            <a href="./img/contromega/slide-10.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-10.jpg" alt="Bastidores: segurança, backup e SEO"></a>
+                            <a href="./img/contromega/slide-11.jpg" target="_blank"><img loading="lazy" src="./img/contromega/slide-11.jpg" alt="Resultado e aprendizados"></a>
+                        </div>
+                        <p class="case__note">As telas do painel usam dados fictícios, num ambiente de demonstração.</p>
+                    </div>
+
                     <div class="project__links">
-                        <a href="https://contromega.com.br" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+                        <a class="button button--primary" href="https://contromega.com.br" target="_blank" rel="noopener noreferrer">Ver site no ar ↗</a>
                     </div>
                 </article>
 
@@ -174,15 +250,15 @@
                 </article>
                 <article class="skill-group">
                     <h3>Front-end</h3>
-                    <div class="skills"><span>React</span><span>Next.js</span><span>Vite</span><span>HTML/CSS</span></div>
+                    <div class="skills"><span>React</span><span>Next.js</span><span>Vite</span><span>Tailwind CSS</span><span>TanStack Query</span><span>HTML/CSS</span><span>SVG</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Back-end e bancos de dados</h3>
-                    <div class="skills"><span>Node.js</span><span>Express</span><span>Nest.js</span><span>Prisma ORM</span><span>PostgreSQL</span><span>MongoDB</span></div>
+                    <div class="skills"><span>Node.js</span><span>Express</span><span>Nest.js</span><span>Prisma ORM</span><span>PostgreSQL</span><span>MongoDB</span><span>Zod</span><span>JWT</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Deploy e infraestrutura</h3>
-                    <div class="skills"><span>Vercel</span><span>Railway</span><span>Cloudflare (DNS)</span><span>VPS (Hostinger)</span><span>Git/GitHub</span></div>
+                    <div class="skills"><span>Vercel</span><span>Railway</span><span>Cloudflare (DNS, R2, Turnstile)</span><span>GitHub Actions</span><span>Sentry</span><span>Resend</span><span>VPS (Hostinger)</span><span>Git/GitHub</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>IA e automação de tarefas</h3>
