@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portfolio de Gustavo Rodrigues Fernandes, estudante de Engenharia de Software e desenvolvedor Full Stack.">
+        content="Portfólio de Gustavo Rodrigues Fernandes, estudante de Engenharia de Software e desenvolvedor Full Stack (React, Next.js, Node.js, Prisma).">
     <link rel="stylesheet" href="style.css">
     <title>Gustavo Rodrigues Fernandes | Desenvolvedor Full Stack</title>
 </head>
@@ -14,13 +14,15 @@
     <main class="portfolio">
         <header class="hero" id="inicio">
             <div class="hero__content">
-                <p class="eyebrow">Portfolio profissional</p>
+                <p class="eyebrow">Portfólio profissional</p>
                 <h1>Gustavo Rodrigues Fernandes</h1>
-                <p class="hero__role">Estágio em Desenvolvedor Full Stack</p>
+                <p class="hero__role">Desenvolvedor Full Stack · Estudante de Engenharia de Software · Em busca de
+                    estágio</p>
                 <div class="hero__actions">
                     <a class="button button--primary" href="mailto:gustavo0904fe@hotmail.com">Entrar em contato</a>
+                    <a class="button button--secondary" href="#projetos">Ver projetos</a>
                     <a class="button button--secondary" href="https://github.com/GustavoRodrigues04" target="_blank"
-                        rel="noopener noreferrer">Ver GitHub</a>
+                        rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
             <img class="hero__photo" src="./img/WhatsApp Image 2026-02-24 at 09.55.27 (1).jpeg"
@@ -29,6 +31,8 @@
 
         <nav class="navigation" aria-label="Navegação principal">
             <a href="#objetivo">Objetivo</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#experiencia">Experiência</a>
             <a href="#reconhecimentos">Reconhecimentos</a>
             <a href="#conhecimentos">Conhecimentos</a>
             <a href="#formacao">Formação</a>
@@ -38,76 +42,181 @@
         <section class="section section--objective" id="objetivo">
             <p class="section__label">01 / Direção profissional</p>
             <h2>Objetivo</h2>
-            <p class="objective">Atuar como Desenvolvedor Full Stack, aplicando meus conhecimentos em programação,
-                desenvolvimento web, bancos de dados e Engenharia de Software para construir soluções eficientes e
-                escaláveis. Busco uma oportunidade para desenvolver minhas habilidades em Front-end e Back-end, adquirir
-                experiência profissional e contribuir para projetos de impacto.</p>
+            <p class="objective">Busco uma vaga de estágio em Desenvolvimento Full Stack. Já coloquei em produção um
+                sistema completo — site institucional, painel administrativo/CRM e API — para uma empresa real,
+                cuidando de tudo, do banco de dados ao deploy. Quero aplicar essa experiência prática, junto com a
+                formação em Engenharia de Software e a base técnica em automação industrial, para construir soluções
+                eficientes e continuar evoluindo no Front-end e no Back-end.</p>
+        </section>
+
+        <section class="section" id="projetos">
+            <p class="section__label">02 / O que eu construí</p>
+            <h2>Projetos</h2>
+            <div class="projects">
+                <article class="project project--featured">
+                    <div class="project__header">
+                        <span class="project__status">Em produção</span>
+                        <h3>Contromega — Site institucional + Painel CRM</h3>
+                    </div>
+                    <p>Sistema completo para uma empresa de manutenção de portas de aço automáticas que atende São
+                        Paulo e todo o Brasil. Desenvolvi sozinho o site público, um painel administrativo com CRM para
+                        gestão de clientes e serviços, e a API que conecta tudo. Planejei o projeto em um roadmap de 8
+                        sprints e cuidei da infraestrutura, dos domínios e da segurança das variáveis de ambiente.</p>
+                    <ul class="project__highlights">
+                        <li>Site público em Next.js e painel administrativo em React + Vite</li>
+                        <li>API REST em Node.js/Express com Prisma ORM</li>
+                        <li>Deploy na Vercel (front-ends) e Railway (API), DNS na Cloudflare</li>
+                        <li>Relatórios de serviços em Excel gerados com Python (openpyxl)</li>
+                    </ul>
+                    <div class="skills"><span>Next.js</span><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>Vercel</span><span>Railway</span><span>Cloudflare</span></div>
+                    <div class="project__links">
+                        <a href="https://contromega.com.br" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project__header">
+                        <span class="project__status">Hospedado em VPS</span>
+                        <h3>Dashboard de Conciliação Financeira</h3>
+                    </div>
+                    <p>Dashboard web para conciliação de dados financeiros, publicada e mantida por mim em uma VPS
+                        da Hostinger, com a configuração do servidor e do deploy feita por conta própria.</p>
+                    <div class="skills"><span>Dashboard</span><span>VPS (Hostinger)</span><span>Deploy</span></div>
+                </article>
+
+                <article class="project">
+                    <div class="project__header">
+                        <span class="project__status">Ferramenta</span>
+                        <h3>Organizador de Provas — Mecatrônica</h3>
+                    </div>
+                    <p>Ferramenta interativa em HTML/JavaScript para organizar a documentação das tarefas da
+                        competição de Mecatrônica (sistemas Festo/MPS) e exportá-la como um PDF formatado. Usada na
+                        preparação para a SP Skills.</p>
+                    <div class="skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Geração de PDF</span></div>
+                </article>
+
+                <article class="project">
+                    <div class="project__header">
+                        <span class="project__status">Acadêmico</span>
+                        <h3>Atividades de Engenharia de Software</h3>
+                    </div>
+                    <p>Exercícios da faculdade com manipulação de arrays e objetos em JavaScript, além de projetos de
+                        Programação Orientada a Objetos em Java (herança e polimorfismo modelados a partir de
+                        diagramas UML).</p>
+                    <div class="skills"><span>JavaScript</span><span>Java</span><span>POO</span><span>UML</span></div>
+                    <div class="project__links">
+                        <a href="./aula2_20022026/index.html">Ver atividade de arrays e objetos →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="experiencia">
+            <p class="section__label">03 / Trajetória profissional</p>
+            <h2>Experiência</h2>
+            <div class="timeline">
+                <article class="timeline__item"><span>Dez/2025 – Out/2026</span>
+                    <h3>Contromega</h3>
+                    <p class="timeline__role">Técnico de manutenção · Desenvolvedor do sistema web</p>
+                    <p>Manutenção de portas de enrolar de aço automáticas. Paralelamente, desenvolvi e coloquei em
+                        produção o site, o painel CRM e a API da empresa, além de gerenciar a conta de Google Ads.</p>
+                </article>
+                <article class="timeline__item"><span>Ago/2024 – Nov/2025</span>
+                    <h3>SENAI-SP</h3>
+                    <p class="timeline__role">Competidor de Mecatrônica</p>
+                    <p>Responsável pela programação e estruturação do projeto da equipe: programação de CLPs
+                        (SCL, Ladder, GraphSet), integração de dispositivos, IHM/supervisório e diagnóstico de falhas
+                        sob pressão de tempo.</p>
+                </article>
+                <article class="timeline__item"><span>Dez/2023 – Jan/2024</span>
+                    <h3>Autônomo</h3>
+                    <p class="timeline__role">Eletricista instalador</p>
+                    <p>Instalações e manutenções elétricas residenciais.</p>
+                </article>
+            </div>
         </section>
 
         <section class="section" id="reconhecimentos">
-            <p class="section__label">02 / Conquista em destaque</p>
+            <p class="section__label">04 / Conquistas em destaque</p>
             <h2>Prêmios e Reconhecimentos</h2>
-            <article class="award">
-                <div class="award__medal">Ouro<br><span>2024</span></div>
-                <div>
-                    <h3>Medalha de Ouro - SP Skills e Medalha de Prata - World Skills Brasil</h3>
-                    <p class="award__category">Modalidade "Mecatrônica"</p>
-                    <p>Conquistei a Medalha de Ouro na São Paulo Skills 2024 e Medalha de Prata na World Skills Brasil
-                        2025, na modalidade de Mecatrônica, competindo contra equipes de São Paulo e do Brasil. Atuei
-                        como responsável pela programação e Estruturação do Projeto, desenvolvendo soluções para CLPs,
-                        integração de dispositivos e diagnóstico de falhas em ambiente de alta pressão. A assertividade
-                        das estratégias de programação e rápida resolução de problemas foram fatores decisivos para o
-                        desempenho da equipe nas competições.</p>
-                </div>
-            </article>
+            <div class="awards">
+                <article class="award">
+                    <div class="award__medal">Ouro<br><span>2024</span></div>
+                    <div>
+                        <h3>Medalha de Ouro — São Paulo Skills 2024</h3>
+                        <p class="award__category">Modalidade "Mecatrônica"</p>
+                        <p>Primeiro lugar na competição estadual, disputando contra equipes de todo o estado de São
+                            Paulo.</p>
+                    </div>
+                </article>
+                <article class="award award--silver">
+                    <div class="award__medal">Prata<br><span>2025</span></div>
+                    <div>
+                        <h3>Medalha de Prata — WorldSkills Brasil 2025</h3>
+                        <p class="award__category">Modalidade "Mecatrônica"</p>
+                        <p>Segundo lugar na etapa nacional, competindo contra as melhores equipes do país.</p>
+                    </div>
+                </article>
+            </div>
+            <p class="awards__note">Nas duas competições, fui o responsável pela programação e estruturação do
+                projeto, desenvolvendo soluções para CLPs, integração de dispositivos e diagnóstico de falhas em
+                ambiente de alta pressão. A assertividade das estratégias de programação e a rápida resolução de
+                problemas foram decisivas para o desempenho da equipe.</p>
         </section>
 
         <section class="section" id="conhecimentos">
-            <p class="section__label">03 / Ferramentas e tecnologias</p>
+            <p class="section__label">05 / Ferramentas e tecnologias</p>
             <h2>Conhecimentos</h2>
             <div class="skills-grid">
                 <article class="skill-group">
                     <h3>Linguagens de programação</h3>
-                    <div class="skills"><span>Python</span><span>Java</span><span>JavaScript</span></div>
+                    <div class="skills"><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span></div>
                 </article>
                 <article class="skill-group">
-                    <h3>Desenvolvimento web</h3>
-                    <div class="skills"><span>HTML/CSS</span><span>Node.js</span><span>React</span><span>Nest.js</span></div>
+                    <h3>Front-end</h3>
+                    <div class="skills"><span>React</span><span>Next.js</span><span>Vite</span><span>HTML/CSS</span></div>
                 </article>
                 <article class="skill-group">
-                    <h3>Bancos de dados</h3>
-                    <div class="skills"><span>PostgreSQL</span><span>SQL</span></div>
+                    <h3>Back-end e bancos de dados</h3>
+                    <div class="skills"><span>Node.js</span><span>Express</span><span>Nest.js</span><span>Prisma ORM</span><span>PostgreSQL</span><span>MongoDB</span></div>
                 </article>
                 <article class="skill-group">
-                    <h3>Ferramentas e IA</h3>
-                    <div class="skills"><span>Git/GitHub</span><span>Claude</span><span>ChatGPT</span><span>Machine Learning</span></div>
+                    <h3>Deploy e infraestrutura</h3>
+                    <div class="skills"><span>Vercel</span><span>Railway</span><span>Cloudflare (DNS)</span><span>VPS (Hostinger)</span><span>Git/GitHub</span></div>
+                </article>
+                <article class="skill-group">
+                    <h3>IA e automação de tarefas</h3>
+                    <div class="skills"><span>Claude</span><span>ChatGPT</span><span>Machine Learning</span><span>Python (openpyxl)</span></div>
                 </article>
                 <article class="skill-group">
                     <h3>Automação industrial</h3>
-                    <div class="skills"><span>SCL</span><span>Ladder</span><span>GraphSet</span><span>IHM/Supervisório</span></div>
+                    <div class="skills"><span>CLP</span><span>SCL</span><span>Ladder</span><span>GraphSet</span><span>IHM/Supervisório</span><span>Festo MPS</span></div>
                 </article>
             </div>
         </section>
 
         <div class="details-grid">
             <section class="section" id="formacao">
-                <p class="section__label">04 / Trajetória</p>
+                <p class="section__label">06 / Estudos</p>
                 <h2>Formação Acadêmica</h2>
                 <div class="timeline">
-                    <article class="timeline__item"><span>Em andamento</span>
+                    <article class="timeline__item"><span>Em andamento · Conclusão 07/2028</span>
                         <h3>Engenharia de Software</h3>
-                        <p>Faculdade São Judas Mooca</p>
-                        <p>Conclusão prevista: 07/2028</p>
+                        <p>Universidade São Judas — Mooca</p>
                     </article>
                     <article class="timeline__item"><span>Concluído em 2024</span>
                         <h3>Técnico em Eletroeletrônica</h3>
                         <p>Escola SENAI "Roberto Simonsen"</p>
                     </article>
+                    <article class="timeline__item"><span>Concluído · 1.600 h</span>
+                        <h3>Eletricista de Manutenção Eletroeletrônica</h3>
+                        <p>SENAI-SP</p>
+                    </article>
                 </div>
             </section>
 
             <section class="section" id="idiomas">
-                <p class="section__label">05 / Comunicação</p>
+                <p class="section__label">07 / Comunicação</p>
                 <h2>Idiomas</h2>
                 <ul class="language-list">
                     <li><strong>Inglês</strong><span>Intermediário - Cursando</span></li>
@@ -122,7 +231,7 @@
                 <h2>Contato</h2>
             </div>
             <div class="contact-list">
-                <p>Jardim Aricanduva - São Paulo - SP</p><a
+                <p>Jardim Aricanduva - São Paulo - SP · CNH A/B</p><a
                     href="mailto:gustavo0904fe@hotmail.com">gustavo0904fe@hotmail.com</a><a
                     href="tel:+5511940820476">+55 (11) 94082-0476</a><a
                     href="https://www.linkedin.com/in/gustavo-rodrigues-b5a732303" target="_blank"

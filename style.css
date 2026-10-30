@@ -233,10 +233,6 @@ h2 {
     background: #fbf8f1;
 }
 
-.skill-group:last-child {
-    grid-column: 1 / -1;
-}
-
 .skill-group h3 {
     margin-bottom: 18px;
     color: var(--teal);
@@ -335,6 +331,116 @@ h2 {
     color: var(--muted);
 }
 
+/* Projetos */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: #fbf8f1;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px #27343b14;
+}
+
+.project--featured {
+    grid-column: 1 / -1;
+    background: #e6f0eb;
+    border-left: 5px solid var(--teal);
+}
+
+.project__status {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--coral);
+    font: 700 0.72rem Arial, sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.project h3 {
+    margin-bottom: 0;
+    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+    line-height: 1.2;
+}
+
+.project > p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font: 0.98rem/1.6 Arial, sans-serif;
+}
+
+.project__highlights {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ink);
+    font: 0.95rem/1.7 Arial, sans-serif;
+}
+
+.project__highlights li::marker {
+    color: var(--coral);
+}
+
+.project__links {
+    margin-top: auto;
+}
+
+.project__links a {
+    color: var(--teal);
+    font: 700 0.8rem Arial, sans-serif;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.project__links a:hover {
+    color: var(--coral);
+}
+
+.project .skills span {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    background: var(--cream);
+}
+
+/* Experiência e prêmios */
+.timeline__item .timeline__role {
+    color: var(--teal);
+    font-weight: 700;
+}
+
+.awards {
+    display: grid;
+    gap: 18px;
+}
+
+.award--silver {
+    background: #eef0f2;
+    border-left-color: #8a969c;
+}
+
+.award--silver .award__medal {
+    border-color: #8a969c;
+    color: #6b777d;
+}
+
+.awards__note {
+    max-width: 880px;
+    margin: 28px 0 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
 @keyframes rise {
     from {
         opacity: 0;
@@ -398,12 +504,13 @@ h2 {
         width: 88px;
     }
 
-    .skills-grid {
+    .skills-grid,
+    .projects {
         grid-template-columns: 1fr;
     }
 
-    .skill-group:last-child {
-        grid-column: auto;
+    .project {
+        padding: 22px;
     }
 
     .details-grid {
@@ -423,4 +530,7 @@ h2 {
         margin-top: 34px;
         text-align: left;
     }
+}
+.project:last-child:nth-child(even) {
+    grid-column: 1 / -1;
 }
